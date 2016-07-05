@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="DigiIndia.videooption"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiIndia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='1' Icon="Accept" Label="Next"                            />
+            <AppBarButton x:ConnectionId='2' Icon="Back" Label="Back"                                />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid x:ConnectionId='3' x:Name="gridname" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListBox x:ConnectionId='4' x:Name="videoList" Margin="0,0,0,50">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Padding="05" Margin="05" Width="1300"  Background="Crimson" >
+                        <TextBlock Text="{Binding videoName}" FontSize=" 24" Foreground="Silver"></TextBlock>
+                        <TextBlock Text="{Binding videoDesc}" Foreground="Silver" />
+                        <TextBlock Text="{Binding videoTutor}" Foreground="Silver" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>
+

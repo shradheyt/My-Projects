@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="DigiIndia.chapter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiIndia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Accept" Label="Next" Click="AppBarButton_Click" />
+            <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_ClickBack" />
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+    <Grid x:Name="gridname" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <ListBox x:Name="chapterList" Margin="0,0,0,50">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Padding="05" Margin="05" Width="1300" Background="Crimson" >
+                        <TextBlock Text="{Binding ChapterName}" FontSize=" 24" Foreground="Silver"></TextBlock>
+                        <TextBlock Text="{Binding ChapCode}" Foreground="Silver" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>
